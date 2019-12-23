@@ -15,7 +15,7 @@
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./ejs.js"></script>  
+    <script src="./DobbleClass.js"></script>  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -30,33 +30,38 @@
 <script>
 
 $("#firstCard").on("click",function(){
- 
-  $("#result1").html(x[keys[0]])
-  $("#result2").html(x[keys[1]])
-  $("#result3").html(x[keys[11]]);
+  var lent = k[x[0]]
+  console.log(lent);
+  $("#result1").html(k[x[0]])
+  $("#result2").html(k[x[1]])
+  $("#result3").html(k[x[11]])
   
   $("#oneOp").keydown(function(event){
   if(event.originalEvent.keyCode == "13"){
-    
-    x[keys[0]].forEach(function(currentValue){if(currentValue == $("#oneOp").val()){
+    for( var i = 2; i < 6; i++){
+    lent.forEach(function(currentValue){if(currentValue == $("#oneOp").val()){
          
+         
+         delete k[x[0]];
+         lent = k[x[i-1]];
+        $("#result2").html(k[x[i]]);
+        $("#result1").html(k[x[i -1]]);
+        console.log(k)
         
          
-         $("#result2").html(x[keys[2]])
-         
-         
-         
-         
         
-    }
+        
+         
+      }
        else{
          return;
        }
+    }
        
 
  
   
-})}
+)}}
 
   })
 
@@ -67,10 +72,17 @@ $("#firstCard").on("click",function(){
 
  $("#secondOp").keydown(function(event){
   if(event.originalEvent.keyCode == "13"){
-    x[keys[0]].forEach(function(currentValue, i){if(currentValue == $("#secondOp").val()){
+    lent.forEach(function(currentValue){
+      if(currentValue == $("#secondOp").val()){
+      
+      var n = 12;
+      lent = k[x[n - 1]]
+      $("#result3").html(k[x[n]]);
+      $("#result3").html(k[x[n - 1]])
+      n = n + 1;
+
       
       
-      $("#result3").html(x[keys[12]])
     
       
     

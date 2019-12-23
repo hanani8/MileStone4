@@ -107,6 +107,7 @@ var addToObject = function (obj, key, value, index,k) {
 y = shuffleProperties(x);
 var keys = Object.keys( y );
  console.log(y);
+ console.log(keys);
  
 
 
