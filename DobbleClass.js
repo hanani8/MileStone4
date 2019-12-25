@@ -58,6 +58,7 @@ class Dobble{
             this[i] = this[b];
             this[b] = a;
         }
+        
     }
 
          function getKeys(obj){

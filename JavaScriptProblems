@@ -1,0 +1,55 @@
+function Hegemon(h){
+    
+String.prototype.replaceAt=function(index, indexe, replacement) {
+    return this.substr(0, index) + replacement + replacement +  this.substr(indexe + replacement.length)
+}
+String.prototype.replaceAtt=function(index, replacement) {
+    return this.substr(0, index) + replacement +  this.substr(index + replacement.length)
+}
+function kotne(kent,array){
+      k = "";
+      for( i = h/2 - 1; i >= 1; i--){
+          k = k + "0"
+      kent.push(array[0].replaceAt(i,h/2,k))
+      }
+  }
+  
+function Jai(kent){
+        for(i = 0; i < kent.length; i++)
+       console.log(kent[i]);
+}
+ 
+
+var array = [];
+for(let i = 0; i < h + 1; i++){
+    let line = "";
+    for(let j = 0; j < h; j++){
+      line += "1"
+    }
+    array.push(line)
+}
+
+var kent = [];
+  
+kent.push(array[0].replaceAtt(h/2,"*"))
+
+kotne(kent, array);
+
+kent.push(array[0].replaceAt(h/2 - 1,h/2, "0"))
+kent.push(array[0].replaceAt(h/2 - 1,h/2, "0"))
+kent.push(array[0].replaceAt(h/2 - 1,h/2, "0"))
+
+kent.push(array[0].replaceAtt(h/2 -2 ,"MERRY"))
+kent.push(array[0].replaceAtt(h/2 - 4,"CHRISTMAS"))
+
+
+Jai(kent);
+}
+
+Hegemon(16);
+
+  
+  
+
+ 
+  
