@@ -1,0 +1,29 @@
+<html>
+    <title>DOBBLE CARD GAME</title>
+    <head>GAME
+       
+    </head>
+    <body>
+        <div id="page">
+            <div id ="game">
+                <div id="circle1" style="background-color:red;" ><canvas id="myCanvas1" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+                </div>
+                <div id="circle2" style="background-color:green;"><canvas id="myCanvas2" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+                </div>
+                <div id="circle3" style="background-color:teal;"><canvas id="myCanvas3" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            for(let i=1;i<4;i++){
+            var c = document.getElementById("myCanvas"+i);
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+            }
+            </script> 
+    </body>
+
+</html>
